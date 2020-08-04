@@ -23,5 +23,20 @@
     // 调用
     myFunction(1, 2);
 
+    // 实例1
+    var x = function (a, b) {return a * b};
+
+    // 实例2
+    var x2 = function (a, b) {return a * b};
+    var z = x(4, 3);
+
+
+    // 函数存在函数提升
+    myFunction(5);
+
+    function myFunction(y) {
+        return y * y;
+    }
+
 </script>
 </html>
