@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise的梳理</title>
+    <style>
+        #god {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1 id="god">Promise的梳理</h1>
+
+</body>
+
+<script>
+
+
+    new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            console.log("RTX 2080Ti");
+            // reject(3);
+            resolve(1);
+        }, 1000);
+    }).then(function (res) {
+        // 当上一步执行成功后采后执行这个方法
+        console.log(123);
+        console.log(res);
+        return Promise.resolve(res);
+    }).then(
+        // 这种写法无论什么结果都会被执行，并且可以实现catch的效果
+        value => {
+            console.log(456+'value');
+            return Promise.resolve(value);
+        },
+        reason => {
+            console.log(456+'reason');
+            return Promise.reject(reason);
+        }
+    ).catch(function (err) {
+        console.log("出错了：" + err);
+    })
+
+
+    // Promise的应用
+
+    // 不加同步的方法调用，最终会打印出 ABC GHI DEF
+    function printABC() {
+        console.log('ABC');
+    }
+    function printDEF() {
+        setTimeout(function () {
+            console.log('DEF')
+        }, 2000);
+    }
+    function printGHI() {
+        console.log('GHI');
+    }
+
+    function AsyncPrintAll() {
+        printABC();
+        printDEF();
+        printGHI();
+    }
+    // 异步的调用
+    AsyncPrintAll();
+
+
+
+
+
+    function printABCAsync() {
+        return new Promise(function (resolve, reject) {
+            console.log('ABC-');
+            resolve();
+        })
+
+    }
+    function printDEFAsync() {
+        return new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log('DEF-')
+                resolve();
+            }, 2000);
+        })
+    }
+    function printGHIAsync() {
+        return new Promise(function (resolve, reject) {
+            console.log('GHI-');
+            resolve();
+        })
+    }
+
+    async function printAll() {
+        await printABCAsync();
+        await printDEFAsync();
+        await printGHIAsync();
+    }
+
+    // 同步调用
+    printAll();
+
+
+</script>
+</html>
