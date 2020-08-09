@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            /*清除默认样式*/
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            /*清除列表的点*/
+            list-style: none;
+            background-color: #2742a5;
+            width: 1000px;
+            margin: 50px auto;
+            /*去除inline-block 换行引起的空白间距*/
+            font-size: 0;
+            /*overflow: hidden;*/
+        }
+
+        .nav li {
+            background-color: #0c76d4;
+            text-align: center;
+            display: inline-block;
+            letter-spacing: -3px;
+
+            /*float: left;*/
+            width: 25%;
+        }
+
+        .nav a{
+            font-size: 3px;
+            letter-spacing: 0;
+            display: block;
+            text-decoration: none;
+            width: 100%;
+            padding: 10px 0px;
+            font-weight: bold;
+            color: aliceblue;
+        }
+        .nav  a:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="nav">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">新闻</a></li>
+        <li><a href="#">联系</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+
+</body>
+</html>

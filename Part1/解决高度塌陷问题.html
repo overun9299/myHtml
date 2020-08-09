@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .father {
+            border: 10px red solid;
+            overflow: hidden;
+        }
+        .haizi {
+            height: 100px;
+            width: 100px;
+            background-color: #a5276c;
+            float: left;
+            /*设置浮动就会高度塌陷 , 父元素设置BFC属性 滚动条是一种实现方式可以解决*/
+        }
+        .otherss {
+            background-color: aqua;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="father">
+
+        <div class="haizi">
+
+        </div>
+
+    </div>
+    <div class="otherss">
+
+    </div>
+</body>
+</html>
