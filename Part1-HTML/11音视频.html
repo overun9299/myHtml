@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音视频</title>
+</head>
+<body>
+    <!-- 
+        audio 标签用来向页面引入一个外部的音频文件
+              音频文件引入时，默认情况下是不允许用户自己控制播放停止的
+        属性：
+            controls 是否允许用户控制播放
+            autoplay 音频文件是否自动播放
+     -->
+
+    <audio src="../material/Bohemian Rhapsody.mp3" controls></audio>
+
+    <!-- 
+        除了通过src来指定外部文件的路径外，还可以通过source来指定文件
+     -->
+
+    <audio controls>
+        <!-- 这种写法多用于浏览器，音频兼容，可指定多个source，但是会加载一个 -->
+        <source src="../material/Bohemian Rhapsody.mp3">
+        <source src="../material/Bohemian Rhapsody.mp3">
+        <!-- 兼任ie8的写法 -->
+        <embed src="../material/Bohemian Rhapsody.mp3" type="audio/mp3" width="300px" height="100px">
+    </audio>
+
+
+
+    <!-- 
+        使用video标签来向网页引入一个视频
+            使用方式和audio基本一样
+     -->
+
+    <video controls width="400px">
+        <source src="../material/Bohemian Rhapsody.mp4" >
+    </video>
+</body>
+</html>
