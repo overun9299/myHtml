@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+</head>
+
+<style>
+    /* 
+        交集选择器
+            作用：选中同时符合多个条件的元素
+            语法：选择器1选择器2选择器3选择器n {}
+        注意点：交集选择器中如果有元素选择器，必须通过元素选择器开头
+    */
+    div.myRed {
+        color: rgb(110, 31, 31);
+    }
+    .a.b.c {
+        color: darkkhaki;
+    }
+
+
+    /* 
+        选择器分组（并集选择器）
+            作用：同时选择多个选择器对应的元素
+            语法：选择器1，选择器2，选择器3，选择器n {}
+    */
+    h1,span {
+        color: darkred;
+    }
+</style>
+<body>
+
+    <div class="myRed">我是div，红色字体</div>
+    <p class="myRed"> 我是p，红色字体</p>
+    <div class="myRed2 a b c">我是div2</div>
+    
+    <h1>你好</h1>
+    <span>世界</span>
+</body>
+</html>
