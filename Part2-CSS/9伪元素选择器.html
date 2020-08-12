@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+</head>
+
+<style>
+
+    /* 
+        伪元素：表示页面中一些特殊的并不真实存在的元素
+            伪元素使用 ::开头
+     */
+
+    /* p::first-letter 表示p元素中第一个字母 */
+    p::first-letter {
+        font-size: 20px;
+    }
+
+    /* p::first-line 表示p元素中第一行 */
+    p::first-line {
+        color: gold;
+    }
+
+    /* 便是选中 */
+    p::selection {
+        color: hotpink;
+    }
+
+    /* 
+        ::before 元素的开始
+        ::after  元素的最后
+            before和after 必须结合content属性来使用
+     */
+    div::before {
+        content: '肥皂，';
+    }
+</style>
+<body>
+
+    <div>你好呀</div>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Officiis officia sed consequatur tempore earum nostrum vitae beatae sit inventore amet. Esse ipsum nostrum in expedita consequatur quo, eaque id ullam!</p>
+</body>
+</html>
