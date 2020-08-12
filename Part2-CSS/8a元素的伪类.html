@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a元素的伪类选择器</title>
+
+    
+    <style>
+        
+        /* :link 用来表示没访问过的连接 */
+        a:link {
+            color: deeppink;
+        }
+
+        /* 
+            :visited 用来表示访问过的连接 
+            犹豫隐私原因， :visited 只能设置颜色，不能设置大小
+        */
+        a:visited {
+            color: deepskyblue;
+        }
+
+        /* 鼠标移入状态 */
+        a:hover {
+            color: firebrick;
+            font-size: 50px;
+        }
+
+        /* 鼠标点击状态 */
+        a:active {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="https://www.google.com" target="_blank">超链接一</a>
+    <br>
+    <a href="https://www.baidu.com" target="_blank">超链接er</a>
+
+</body>
+</html>
