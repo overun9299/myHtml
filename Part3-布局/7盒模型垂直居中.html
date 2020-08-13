@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒模型垂直居中</title>
+    <style>
+        
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background-color: blueviolet;
+            /* 
+                在不设置父元素高度情况下默认下父元素的高度会被子元素撑开
+             */
+
+            /* 
+                如果子元素的高度超过了父元素，则子元素会从父元素中溢出
+                    使用overflow属性来设置父元素如何处理溢出的子元素
+                    可选值
+                        visible,默认值子元素会从父元素中溢出
+                        hidden，溢出内容会被裁减
+                        scroll 生成两个滚动条
+                        auto 根据需要生成滚动条
+             */
+            overflow: auto;
+        }
+
+        .box2 {
+            width: 150px;
+            height: 600px;
+            background-image: linear-gradient(#e66465, #9198e5);
+            margin-left: 50px;
+
+            /* 
+                如果子元素的高度超过了父元素，则子元素会从父元素中溢出
+             */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+
+        <div class="box2"></div>
+
+    </div>
+</body>
+</html>

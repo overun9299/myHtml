@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子的水平居中</title>
+    <style>
+        .outer {
+            width: 800px;
+            height: 200px;
+            background-color: aqua;
+        }
+        .inner {
+            width: 200px;
+            height: 100%;
+            background-color: blueviolet;
+
+            /* 
+                元素在水平方向的布局
+                    元素在其父元素中水平方向的位置由以下几个属性共同决定
+                    margin-left
+                    border-left
+                    padding-left
+                    width
+                    padding-right
+                    border-right
+                    margin-right
+                一个元素在其父元素中，水平布局必须要满足以下等式
+                    margin-left + border-left + padding-left + 
+                        width + padding-right + border-right + margin-right = 其父元素的宽度（必须满足）
+
+                0 + 0 + 0 + 200 + 0 + 0 + 0 = 800
+                    在只设置width时，会自动设置margin-right为600以满足等式
+
+                以上等式必须满足，如果相加结果使等式不成立，则称之为过度约束，等式会自动调整
+                    调整情况
+                        如果这7个值中没有为auto的情况，则浏览器会自动调整margin-right的值使等式成立
+                        这7个值中有三个值可以设置为auto
+                            width
+                            margin-left
+                            margin-right
+                        如果某个值为auto，会自动改变auto的值使等式成立
+                如果margin-right为负值，margin-left和width为auto，则整体宽度为父元素宽度+margin-right的宽度，会溢出去
+                
+             */
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+
+        <div class="inner"></div>
+
+    </div>
+</body>
+</html>
