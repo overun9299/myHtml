@@ -42,18 +42,23 @@
                 造成外边距折叠的两个因素，相邻 外边距 破坏其中一个就行
                     1.给父元素加一个border-top: 1px solid; 让顶部不相邻
                     2.子元素不使用margin-top 而在父元素设置padding-top，并减去对应的高度
+
+                注意：如果父元素有margin-top或bottom时，则取两个绝对值的最大值
          */
         
         .box3 {
             width: 300px;
             height: 300px;
             background-color: cornflowerblue;
+            margin: auto;
+            margin-top: 100px;
         }
 
         .box4 {
             width: 150px;
             height: 150px;
             background-color: crimson;
+            margin-top: 50px;
         }
     </style>
 </head>
