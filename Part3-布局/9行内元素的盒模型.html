@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内元素的盒模型</title>
+    <style>
+        /* 
+            行内元素的盒模型
+                行内元素不支持设置宽度和高度
+                行内元素可以设置padding，但是垂直方向的padding不会影响布局
+                行内元素可以设置border，垂直方向的border不会影响布局
+                行内元素可以设置margin，垂直方向的margin不会影响布局
+                以上属性水平放行会影响布局，但是不会出现外边距折叠问题，全部相加
+         */
+        span {
+            background-color: darkmagenta;
+            margin-left: 100px;
+            padding-bottom: 200px;
+        }
+        
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background-color: cyan;
+        }
+
+        /* 
+            display 用来设置元素的显示类型
+                可选值
+                    inline:将元素设置为行内元素
+                    block 将元素设置为块元素
+                    inline-block 将元素设置为行内块元素 既可以设置高度宽度，而且不会独占一行
+                    table 将元素设置成一个表格
+                    none 元素不显示，且不占空间
+            visibility 用来设置元素的显示状态
+                可选值
+                    visible 默认值 元素在页面中正常显示
+                    hidden 元素在页面中隐藏，但是占据位置
+         */
+    </style>
+</head>
+<body>
+    <span>123</span>
+    <span>123</span>
+    <span>123</span>
+    <span>123</span>
+    <div class="box1">
+
+    </div>
+</body>
+</html>
