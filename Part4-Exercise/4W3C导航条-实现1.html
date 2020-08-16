@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航条</title>
+    <style>
+        .box1 {
+           height: 100px; 
+           width: 1200px;
+           /* margin-top: 50px;
+           margin-left: 50px; */
+           margin: 50px auto;
+           /* background-color: teal; */
+        }   
+        .box1 > div {
+            height: 50px;
+            width: 150px;
+            text-align: center;
+            background-color: wheat;
+            line-height: 50px;
+            float: left;
+        }
+        .box1 a {
+            color:black;
+            text-decoration: none;
+            display: block;
+        }
+        a:hover {
+            background-color: chocolate;
+        }
+
+        .box2 ul {
+            list-style: none;
+            font-size: 0px;
+        }
+
+        .box2 li {
+            display: inline-block;
+            list-style: none;
+            height: 50px;
+            width: 150px;
+            background-color: wheat;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .box2 a {
+            color:black;
+            text-decoration: none;
+            display: block;
+            font-size: 12px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box1">
+        <div><a href="">HTML/CSS</a></div>
+        <div><a href="">Browser Side</a></div>
+        <div><a href="">Service Side</a></div>
+        <div><a href="">Programming</a></div>
+        <div><a href="">XML</a></div>
+        <div><a href="">Web Building</a></div>
+        <div><a href="">Reference</a></div>
+    </div>
+
+
+    <div class="box2">
+
+        <ul>
+            <li><a href="">HTML/CSS</a></li>
+            <li><a href="">Browser Side</a></li>
+            <li><a href="">Service Side</a></li>
+            <li><a href="">Programming</a></li>
+            <li><a href="">XML</a></li>
+            <li><a href="">Web Building</a></li>
+            <li><a href="">Reference</a></li>
+        </ul>
+    </div>
+</body>
+</html>
