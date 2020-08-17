@@ -39,35 +39,104 @@
         }
 
     
-        .myActive , .img-a a:hover{
+        a.myActive , .img-a a:hover{
             border: 2px solid rebeccapurple;
             background-color: rgba(255, 255, 255, 1);
+            
         }
 
+        .imgShow {
+            z-index: 3;
+        }
+
+        .imgHidden {
+            z-index: 1;
+        }
         
     </style>
 </head>
 <body>
     <ul class="img-list">
-        <li><a href=""><img src="./05/1.jpg" alt=""></a></li>
-        <li><a href=""><img src="./05/2.jpg" alt=""></a></li>
-        <li><a href=""><img src="./05/3.jpg" alt=""></a></li>
-        <li><a href=""><img src="./05/4.jpg" alt=""></a></li>
-        <li><a href=""><img src="./05/5.jpg" alt=""></a></li>
-        <li><a href=""><img src="./05/6.jpg" alt=""></a></li>
-        <li><a href=""><img src="./05/7.jpg" alt=""></a></li>
-        <li><a href=""><img src="./05/8.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./05/1.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./05/2.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./05/3.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./05/4.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./05/5.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./05/6.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./05/7.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./05/8.jpg" alt=""></a></li>
 
         <div class="img-a">
-            <a class="myActive" href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
+            <a href="javascript:;" onclick="imgClick(1)"></a>
+            <a href="javascript:;" onclick="imgClick(2)"></a>
+            <a href="javascript:;" onclick="imgClick(3)"></a>
+            <a href="javascript:;" onclick="imgClick(4)"></a>
+            <a href="javascript:;" onclick="imgClick(5)"></a>
+            <a href="javascript:;" onclick="imgClick(6)"></a>
+            <a href="javascript:;" onclick="imgClick(7)"></a>
+            <a href="javascript:;" onclick="imgClick(8)"></a>
         </div>
     </ul>
 </body>
+
+<script>
+    // 默认第一个
+    imgClick(1);
+    
+    var a = 0;
+    lunBo(a);
+
+    function imgClick(num) {
+
+        // 处理轮播按钮
+        var div = document.querySelector(".img-a a:nth-child("+num+")");
+        div.setAttribute('class', 'myActive');
+        var div2 = document.querySelectorAll(".img-a a:not(:nth-child("+num+"))");
+        for (let a = 0 ; a< div2.length ; a++) {
+            div2[a].classList.remove("myActive");
+        }
+        // 处理图片
+        var div3 = document.querySelector(".img-list li:nth-child("+num+")");
+        div3.setAttribute('class','imgShow');
+
+        var div4 = document.querySelectorAll(".img-list li:not(:nth-child("+num+"))");
+        for (let a = 0 ; a< div4.length ; a++) {
+            div4[a].setAttribute('class','imgHidden');
+        }
+        a = num;
+    }
+
+
+    function imgClickAuto(num) {
+
+        // 处理轮播按钮
+        var div = document.querySelector(".img-a a:nth-child("+num+")");
+        div.setAttribute('class', 'myActive');
+        var div2 = document.querySelectorAll(".img-a a:not(:nth-child("+num+"))");
+        for (let a = 0 ; a< div2.length ; a++) {
+            div2[a].classList.remove("myActive");
+        }
+        // 处理图片
+        var div3 = document.querySelector(".img-list li:nth-child("+num+")");
+        div3.setAttribute('class','imgShow');
+
+        var div4 = document.querySelectorAll(".img-list li:not(:nth-child("+num+"))");
+        for (let a = 0 ; a< div4.length ; a++) {
+            div4[a].setAttribute('class','imgHidden');
+        }
+
+        }
+
+    function lunBo (a) {
+        setInterval(function(){
+            a++;
+            imgClickAuto(a);
+            if (a > 7) {
+                a= 0;
+            }
+        },2000)
+    }
+    
+
+</script>
 </html>
