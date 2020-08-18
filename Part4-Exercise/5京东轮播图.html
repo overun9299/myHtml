@@ -81,9 +81,10 @@
 
 <script>
     // 默认第一个
-    imgClick(1);
+    imgClickAuto(1);
     
     var a = 0;
+    var bInterval;
     lunBo(a);
 
     function imgClick(num) {
@@ -103,7 +104,8 @@
         for (let a = 0 ; a< div4.length ; a++) {
             div4[a].setAttribute('class','imgHidden');
         }
-        a = num;
+        clearInterval(bInterval)
+        lunBo(num);
     }
 
 
@@ -128,7 +130,8 @@
         }
 
     function lunBo (a) {
-        setInterval(function(){
+
+        bInterval = setInterval(function(){
             a++;
             imgClickAuto(a);
             if (a > 7) {
