@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./icon/iconfont.css">
 
     <style>
+        .clearFax::after ,  .clearFax::before{
+            content: '';
+            display: table;
+            clear: both;
+        }
 
         .motherTop {
             height: 31px;
@@ -20,13 +25,44 @@
             margin: 0 auto;
         }
         .topLeft {
+            float: left;
+        }
+        .myFax {
             width: 56px;
             line-height: 28px;
             border: 1px solid transparent;
+            background-color: #fff;
+            float: left;
+        }
+        .topRight {
+            float: right;
         }
         .localImg {
             width: 20px;
             height: 20px;
+        }
+        .topLeft-Font {
+            padding-left: 4px;
+            font-size: 14px;
+        }
+        .topRightDetails {
+            margin-top: 1px;
+        }
+        .topRightDetails li {
+            float: left;
+            margin-left: 10px;
+            line-height: 31px;
+        }
+        .myI {
+            width: 1px;
+            height: 12px;
+            background-color: #ccc;
+            margin-top: 9px;
+        }
+        .topLeftDetails {
+            width: 321px;
+            height: 462px;
+            background-color: rgb(221, 21, 21);
         }
     </style>
 </head>
@@ -34,8 +70,28 @@
     <div class="motherTop">
 
         <div class="mainAre">
-            <div class="topLeft"><span><img class="localImg" src="./img/定位.png" alt=""></span><span>京东</span></div>
-            <div class="topRight"></div>
+            <div class="topLeft">
+                <div class="myFax">
+                    <span><img class="localImg" src="./img/定位.png" alt=""></span>
+                    <span class="topLeft-Font">京东</span>
+                </div>
+                <div class="topLeftDetails"></div>
+            </div>
+            
+            <div class="topRight">
+                <ul class="topRightDetails">
+                    <li><a href=""><span>陕西你好，请登录</span></a></li>
+                    <li><a href=""><span>免费注册</span></a></li>
+                    <li class="myI"></li>
+                    <li><a href=""><span>我的订单</span></a></li>
+                    <li><a href=""><span>我的京东</span></a></li>
+                    <li><a href=""><span>京东会员</span></a></li>
+                    <li><a href=""><span>企业采购</span></a></li>
+                    <li><a href=""><span>客户服务</span></a></li>
+                    <li><a href=""><span>网站导航</span></a></li>
+                    <li><a href=""><span>手机京东</span></a></li>
+                </ul>
+            </div>
 
 
         </div>
