@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子元素对浮动的影响</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(46, 33, 221);
+            float: left;
+        }
+
+
+        .box3 {
+
+            width: 100px;   
+            height: 100px;
+            background-color: brown;
+            float: left;
+        ;
+        }
+
+        .box4 {
+            width: 50px;
+            height: 50px;
+            background-color: #3043a0;
+            z-index: 20;
+            float: left;
+        }
+
+        /* 
+            如果父元素浮动，子元素也会跟着浮动
+         */
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box3">
+            <span>123</span>
+        </div>
+        <div class="box4">
+            <span>345</span>
+        </div>
+    </div>
+
+</body>
+</html>

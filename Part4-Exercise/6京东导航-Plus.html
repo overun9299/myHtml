@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./icon/iconfont.css">
 
     <style>
-        .clearFax::after ,  .clearFax::before{
+        .clearFix::after ,  .clearFix::before{
             content: '';
             display: table;
             clear: both;
         }
+
 
         .motherTop {
             height: 31px;
@@ -26,13 +27,24 @@
         }
         .topLeft {
             float: left;
+            position: relative;
         }
+
+        .topLeft:hover > .topLeftDetails{
+            display: block;
+        }
+        .topLeft:hover > .myFax {
+            border-color: #ccc #ccc white #ccc;
+            z-index: 100;
+        }
+
+
         .myFax {
             width: 56px;
-            line-height: 28px;
+            line-height: 29px;
             border: 1px solid transparent;
             background-color: #fff;
-            float: left;
+            position: relative;
         }
         .topRight {
             float: right;
@@ -42,7 +54,7 @@
             height: 20px;
         }
         .topLeft-Font {
-            padding-left: 4px;
+            padding-left: 1px;
             font-size: 14px;
         }
         .topRightDetails {
@@ -60,10 +72,17 @@
             margin-top: 9px;
         }
         .topLeftDetails {
+            margin-top: -1px;
+            position: relative;
             width: 321px;
             height: 462px;
-            background-color: rgb(221, 21, 21);
+            border: 1px #ccc solid;
+            float: right;
+            display: none;
         }
+
+        
+        
     </style>
 </head>
 <body>
@@ -95,6 +114,7 @@
 
 
         </div>
+        <div class="mainMaxs"></div>
     </div>
 </body>
 </html>
