@@ -29,10 +29,10 @@
 
 /* 下载二维码 */
 .qrcode {
-    display: none;
+
     position: absolute;
     width: 124px;
-    height: 148px;
+    /*height: 148px;*/
     box-shadow: 0 0 10px rgba(0,0,0,.3);
     left: -36px;
 
@@ -40,6 +40,12 @@
     line-height: 1;
     /* 文字居中 */
     text-align: center;
+
+    /* 图片使用渐变方式出现 */
+    /*display: none;*/
+    height: 0px;
+    overflow: hidden;
+    transition: height 3s;
 }
 
 /* 二维码图片 */
@@ -72,12 +78,14 @@
 }
 
 /* 二维码悬停显示 */
-.app:hover .qrcode , .app:hover::after{
+.app:hover::after{
     display: block;
 }
+.app:hover .qrcode  {
+    height: 148px;
+}
 
-
-/*购物车*/
+    /*购物车*/
 .shop-car a {
     width: 120px;
     float: right;
