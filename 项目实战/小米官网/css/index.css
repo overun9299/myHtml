@@ -24,7 +24,53 @@
 /* 向左浮动 */
 .left-service, .left-service li{
     float: left;
+    position: relative;
 }
+
+/* 下载二维码 */
+.qrcode {
+    display: none;
+    position: absolute;
+    width: 124px;
+    height: 148px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    left: -36px;
+}
+
+/* 二维码图片 */
+.qrcode img {
+    width: 90px;
+    margin-left: 17px;
+    margin-top: 18px;
+}
+.qrcode span {
+    color: #333333;
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 18px;
+}
+
+/* 二维码小三角 */
+.app::after {
+    display: none;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border:8px solid transparent;
+    border-top: none;
+    border-bottom-color: white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* 二维码悬停显示 */
+.app:hover .qrcode , .app:hover::after{
+    display: block;
+}
+
 
 /*购物车*/
 .shop-car a {
