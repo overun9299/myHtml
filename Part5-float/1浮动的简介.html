@@ -30,6 +30,12 @@
                         浮动目前来讲它的主要作用就是让页面中的元素可以水平排列，
                             通过浮动可以制作一些水平方向的布局    
         */
+
+        .mainDiv {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
         .box1 {
             width: 400px;
             height: 200px;
@@ -41,7 +47,8 @@
             width: 400px;
             height: 200px;
             background-color: orange;
-            float: left;
+            float: right;
+
         }
 
         .box3{
@@ -49,14 +56,18 @@
             height: 200px;
             background-color: yellow;
             float: right;
+            margin-left: 20px;
         }
 
 
     </style>
 </head>
 <body>
-    <div class="box1"></div>
-    <div class="box2"></div>
-    <div class="box3"></div>
+    <div class="mainDiv">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
 </body>
 </html>
