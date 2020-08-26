@@ -45,7 +45,7 @@
     /*display: none;*/
     height: 0px;
     overflow: hidden;
-    transition: height 3s;
+    transition: height 2s;
 }
 
 /* 二维码图片 */
@@ -85,20 +85,44 @@
     height: 148px;
 }
 
-    /*购物车*/
+/*购物车*/
 .shop-car a {
     width: 120px;
     float: right;
     text-align: center;
     background-color: #424242;
     margin-left: 26px;
+    position: relative;
 }
 /* 购物车的鼠标悬停 */
 .shop-car:hover a{
     color: orange;
     background-color: #fff;
 }
+/* 购物车悬停详情 */
+.shop-car-details {
 
+    width: 316px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+    left: -196px;
+
+    height: 0;
+    overflow: hidden;
+    transition: height 1s;
+}
+.shop-car:hover .shop-car-details {
+    height: 100px;
+    color: black;
+    line-height: 100px;
+}
+.shop-car:hover span {
+    display:block;
+}
+.shop-car-details span {
+    display: none;
+}
 
 /*用户信息*/
 .right-user-service, .right-user-service li {
