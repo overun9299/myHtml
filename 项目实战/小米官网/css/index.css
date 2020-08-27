@@ -134,3 +134,101 @@
     color: #424242;
     padding: 0 7px;
 }
+
+/* 商城分类 */
+.myclassification {
+    /*width: 100%;*/
+    position: relative;
+    /*background-color: #6bbb25;*/
+}
+.myclassification-details {
+    height: 100px;
+    /*background-color: #0c76d4;*/
+}
+/* 小米商城logo */
+.myLogo {
+    float: left;
+    width: 55px;
+    height: 55px;
+    /*margin-top: 22px;*/
+    position: absolute;
+    /*display: inline-block;*/
+}
+.logos {
+    float: left;
+    width: 55px;
+    height: 55px;
+    margin-top: 22px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ff6700;
+    /* 隐藏logo中的文字 */
+    text-indent: -9999px;
+
+}
+.logo-logo {
+    transition: left 0.5s;
+    left: 0px;
+    background-image: url("../img/mi-logo.png");
+    background-size: 55px;
+}
+.logo-home {
+    transition: left 0.5s;
+    left: -55px;
+    background-image: url("../img/mi-home.png");
+    background-size: 55px;
+}
+.logos:hover > .logo-logo{
+    left: 55px;
+}
+.logos:hover >.logo-home{
+    left: 0px;
+}
+
+/* 小米分类中间分类 */
+.zhongjianfenlei {
+    /*width: 850px;*/
+    height: 100px;
+    float: left;
+    line-height: 100px;
+    /*background-color: #9198e5;*/
+    margin-left: 7px;
+    padding-left: 58px;
+}
+.zhongjianfenlei li {
+    float: left;
+    margin-right: 20px;
+}
+.zhongjianfenlei li a{
+    display: block;
+    font-size: 16px;
+    color: #333333;
+}
+.zhongjianfenlei li a:hover {
+    color: #ff6700;
+}
+/* 隐藏allGoods */
+.allGoods {
+    visibility: hidden;
+}
+
+.zhongjianfenlei-xiangqing {
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    transition: height 0.35s;
+}
+
+.showGoods:hover ~ .zhongjianfenlei-xiangqing {
+    height: 228px;
+    border-top: 1px solid rgb(224, 224, 224);
+    box-shadow: 0 5px 3px rgba(0, 0, 0, .2);
+}
+
+.zhongjianfenlei-xiangqing:hover {
+    height: 228px;
+    border-top: 1px solid rgb(224, 224, 224);
+    box-shadow: 0 5px 3px rgba(0, 0, 0, .2);
+}
