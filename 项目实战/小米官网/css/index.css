@@ -29,13 +29,12 @@
 
 /* 下载二维码 */
 .qrcode {
-
     position: absolute;
     width: 124px;
     /*height: 148px;*/
     box-shadow: 0 0 10px rgba(0,0,0,.3);
     left: -36px;
-
+    background-color: white;
     /* 去除父元素的行高影响 */
     line-height: 1;
     /* 文字居中 */
@@ -46,6 +45,7 @@
     height: 0px;
     overflow: hidden;
     transition: height 2s;
+    z-index: 999;
 }
 
 /* 二维码图片 */
