@@ -234,6 +234,43 @@
     box-shadow: 0 5px 3px rgba(0, 0, 0, .2);
 }
 
+/* 右侧搜索栏 */
+.searchGod {
+    width: 296px;
+    height: 100px;
+    float: right;
+    /*background-color: #bfc;*/
+}
+.searchInput {
+    float: left;
+    box-sizing: border-box;
+    width: 244px;
+    height: 50px;
+    border: 1px solid rgb(224, 224, 224);
+    border-right: none;
+    margin-top: 25px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+.searchBtn {
+    box-sizing: border-box;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: 25px;
+    font-size: 19px;
+    border: 1px solid rgb(224, 224, 224);
+    color: #616161;
+}
+.searchInput:focus, .searchInput:focus + .searchBtn{
+    border-color: #ff6700;
+}
+.searchBtn:hover {
+    background-color: #ff6700;
+    color:white;
+    border-color: #ff6700;
+}
+
 /* 左侧菜单 */
 .left-menu {
     position: absolute;
@@ -245,6 +282,7 @@
     /*border-style: solid;*/
     /*border-color: rgba(105,101,101,.6);*/
     padding: 20px 0;
+    z-index: 33;
 }
 .left-menu >li {
     height: 43px;
@@ -287,3 +325,19 @@
     background-size: cover;
 }
 
+/* 轮播图 */
+.myBanner {
+    height: 470px;
+    background-color: #2fa527;
+}
+.banner-details {
+    /*position: absolute;*/
+    position: relative;
+    height: 470px;
+    background-color: #4d25bb;
+    z-index: 1;
+}
+.banner-details img {
+    position: absolute;
+    height: 470px;
+}
