@@ -328,16 +328,33 @@
 /* 轮播图 */
 .myBanner {
     height: 470px;
-    background-color: #2fa527;
+    /*background-color: #2fa527;*/
 }
 .banner-details {
     /*position: absolute;*/
     position: relative;
     height: 470px;
-    background-color: #4d25bb;
+    /*background-color: #4d25bb;*/
     z-index: 1;
 }
 .banner-details img {
+    width: 1252px;
     position: absolute;
     height: 470px;
+}
+
+/* 精灵伴侣 */
+.jingling {
+    width: 24px;
+    height: 209px;
+    background-color: #2fa527;
+    /* 固定定位 */
+    position: fixed;
+    top: 395px;
+    /*right: 289px;*/
+    z-index: 444;
+    /* 设置紧贴图片,随着窗口改变而改变 */
+    /* auto + 0 + width + ? + 50% */
+    right: 50%;
+    margin-right: -639px;
 }
