@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        html{
+            /* 设置视距 */
+            perspective: 800px;
+        }
+        body{
+            background-color: silver;
+            border: 1px red solid;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #a5276c;
+            transition: all 1s;
+            margin: 100px auto;
+        }
+
+        .box1:hover {
+            transform: translateZ(300px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+</body>
+</html>
