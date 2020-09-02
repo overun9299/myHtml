@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>复仇者联盟</title>
+    <style>
+        html {
+            perspective: 800px;
+        }
+        .box1{
+            width: 240px;
+            height: 240px;
+            /*background-color: #2fa527;*/
+            margin: 150px auto;
+            position: relative;
+
+            /* 设置3d变形效果 */
+            transform-style: preserve-3d;
+            /* transform: rotateX(45deg) rotateZ(45deg); */
+            animation: rotate 20s infinite linear;
+        }
+        .box1 div{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            position: absolute;
+            /* 设置元素透明度 */
+            opacity: .7;
+        }
+        .box2{
+            background-image: url("./img/Avengers/1.jpg");
+            transform: rotateX(90deg) translateZ(120px);
+
+        }
+        .box3{
+            background-image: url("./img/Avengers/2.jpg");
+            transform: rotateX(-90deg) translateZ(120px);
+        }
+
+        .box4{
+            background-image: url("./img/Avengers/3.jpg");
+            transform: rotateY(90deg) translateZ(120px);
+        }
+        .box5{
+            background-image: url("./img/Avengers/4.jpg");
+            transform: rotateY(-90deg) translateZ(120px);
+        }
+        .box6{
+            background-image: url("./img/Avengers/5.jpg");
+            transform: translateZ(120px);
+        }
+        .box7{
+            background-image: url("./img/Avengers/6.jpg");
+            transform: translateZ(-120px);
+        }
+
+        @keyframes rotate {
+            form{
+                transform:rotateX(0) rotateZ(0)
+            }
+
+            to{
+                transform:rotateX(1turn) rotateZ(1turn)
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box1">
+        <div class="box2">
+
+        </div>
+        <div class="box3">
+
+        </div>
+        <div class="box4">
+
+        </div>
+        <div class="box5">
+
+        </div>
+        <div class="box6">
+
+        </div>
+        <div class="box7">
+
+        </div>
+    </div>
+</body>
+</html>
