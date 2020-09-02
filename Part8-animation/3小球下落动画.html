@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>小球下落动画</title>
+
+    <style>
+
+        .boxMax {
+            width: 100%;
+            border-bottom: 10px solid plum;
+        }
+
+        .box0{
+            width: 770px;
+            height: 700px;
+            margin: 0 auto;
+
+        }
+        .box0 div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-left: 5px;
+            float: left;
+
+            /*  执行动画  */
+            animation-name: test;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            /* 一直循环 */
+            animation-iteration-count: infinite;
+            /* 重复时原路返回 */
+            animation-direction: alternate;
+            /* 匀速 */
+            animation-timing-function: linear;
+        }
+
+        .box1{
+           animation-delay: 0s;
+           background-color: #a5276c;
+        }
+        .box2{
+            animation-delay: 0.5s;
+            background-color: #2fa527;
+        }
+        .box3{
+            animation-delay: 1s;
+            background-color: gold;
+        }
+        .box4{
+            animation-delay: 1.5s;
+            background-color: saddlebrown;
+        }
+        .box5{
+            animation-delay: 2s;
+            background-color: lightsteelblue;
+        }
+        .box6{
+            animation-delay: 2.5s;
+            background-color: orange;
+        }
+        .box7{
+            animation-delay: 3s;
+            background-color: darkgoldenrod;
+        }
+        
+        @keyframes test {
+            from{
+                margin-top: 0px;
+            }
+
+            to{
+                margin-top: 600px;
+            }
+        }
+
+        .boxMax:hover div {
+            animation-duration: 0.5s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="boxMax">
+        <div class="box0">
+
+            <div class="box1">
+
+            </div>
+            <div class="box2">
+
+            </div>
+            <div class="box3">
+
+            </div>
+            <div class="box4">
+
+            </div>
+            <div class="box5">
+
+            </div>
+            <div class="box6">
+
+            </div>
+            <div class="box7">
+
+            </div>
+    </div>
+
+
+    </div>
+</body>
+</html>
