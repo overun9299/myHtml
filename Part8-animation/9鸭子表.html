@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鸭子表</title>
+
+    <style>
+
+        .box1{
+            width: 600px;
+            height: 600px;
+            /*background-color: #a5276c;*/
+            margin: 0 auto;
+            border-radius: 50%;
+            /*border: 5px silver solid;*/
+            position: relative;
+            background-image: url("./img/bg3.jpg");
+            background-size: cover;
+        }
+        .box1 div {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .hour {
+            width: 400px;
+            height: 400px;
+            /*background-color: #a5276c;*/
+            position: absolute;
+            animation: run 43200s  linear infinite;
+        }
+        .hour-s {
+            height: 50%;
+            width: 11px;
+            background-color: #2fa527;
+        }
+        .min {
+            width: 450px;
+            height: 450px;
+            /*background-color: #a5276c;*/
+            position: absolute;
+            animation: run 3600s  linear infinite;
+        }
+        .min-s {
+            height: 50%;
+            width: 6px;
+            background-color: salmon;
+        }
+
+        .sec {
+            width: 530px;
+            height: 530px;
+            /*background-color: #a5276c;*/
+            position: absolute;
+            animation: run 60s  steps(60) infinite;
+        }
+        .sec-s {
+            height: 50%;
+            width: 2px;
+            background-color: blue;
+        }
+        
+        
+        
+        @keyframes run {
+            from{
+                transform: rotateZ(0);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box1">
+
+        <div class="hour">
+            <div class="hour-s">
+
+            </div>
+        </div>
+        <div class="min">
+            <div class="min-s">
+
+            </div>
+        </div>
+        <div class="sec">
+            <div class="sec-s">
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
