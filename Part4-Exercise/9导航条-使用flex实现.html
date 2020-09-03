@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条-flex实现</title>
+    <link rel="stylesheet" href="../material/css/reset.css">
+
+    <style>
+
+        ul {
+            height: 50px;
+            width: 1200px;
+            margin: 50px auto;
+            line-height: 50px;
+            /* 定义为盒模型 */
+            display: flex;
+            background-color: #c0ebf8;
+            text-align: center;
+        }
+
+        ul li {
+            flex-grow: 1;
+        }
+
+        ul > a {
+            display: block;
+        }
+        ul > li:hover {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="">HTML/CSS</a></li>
+        <li><a href="">Browser Side</a></li>
+        <li><a href="">Service Side</a></li>
+        <li><a href="">Programming</a></li>
+        <li><a href="">XML</a></li>
+        <li><a href="">Web Building</a></li>
+        <li><a href="">Reference</a></li>
+    </ul>
+
+</body>
+</html>
