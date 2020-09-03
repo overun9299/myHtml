@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝导航条</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box1 {
+            width: 100%;
+        }
+
+        .myOne {
+            width: 100%;
+            /* 设置为弹性盒子 */
+            display: flex;
+            /* space-around 空白分布到元素两侧 */
+            justify-content:space-around;
+        }
+
+        .myOne li {
+            /* 让元素的大小只占父元素的17% 这样父元素变大子元素同比缩放 */
+            width: 17%;
+            /*background-color: #bfc;*/
+            text-align: center;
+        }
+        .myOne li img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box1">
+        <div class="box2">
+            <ul class="myOne">
+                <li><img src="./img/taobao/1.png" ><span>天猫</span></li>
+                <li><img src="./img/taobao/2.png" ><span>聚划算</span></li>
+                <li><img src="./img/taobao/3.png" ><span>天猫国际</span></li>
+                <li><img src="./img/taobao/4.png" ><span>外卖</span></li>
+                <li><img src="./img/taobao/5.png" ><span>天猫超市</span></li>
+            </ul>
+
+        </div>
+        <div class="box2">
+            <ul class="myOne">
+                <li><img src="./img/taobao/6.png" ><span>充值中心</span></li>
+                <li><img src="./img/taobao/7.png" ><span>飞猪旅行</span></li>
+                <li><img src="./img/taobao/8.png" ><span>领金币</span></li>
+                <li><img src="./img/taobao/9.png" ><span>拍卖</span></li>
+                <li><img src="./img/taobao/10.png"><span>分类</span></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
